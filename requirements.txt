@@ -1,0 +1,4 @@
+requests
+aiohttp
+urllib3
+dataclasses_json
