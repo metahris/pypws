@@ -1,0 +1,58 @@
+[
+    {
+        "option_type": "Payer",
+        "exercise_style": "European",
+        "pricing_model": "BlackScholesMerton",
+        "valuation_date": "2023-04-24",
+        "effective_date": "2023-04-24",
+        "expiration_date": "2024-04-24",
+        "underlying": {
+            "fixed_rate": 0.02,
+            "floating_rate_reference": "LIBOR",
+            "floating_rate_spread": 0.001,
+            "payment_frequency_months": 6,
+            "currency": "USD",
+            "day_count_convention": "30/360",
+            "start_date": "2024-04-24",
+            "end_date": "2029-04-24",
+            "notional": 1000000.0,
+            "valuation_date": "2023-04-24"
+        },
+        "exercise_date": "2024-04-24",
+        "settlement_type": "Cash",
+        "price": null,
+        "delta": null,
+        "gamma": null,
+        "vega": null,
+        "theta": null,
+        "rho": null
+    },
+    {
+        "option_type": "Receiver",
+        "exercise_style": "European",
+        "pricing_model": "BlackScholes",
+        "valuation_date": "2023-04-24",
+        "effective_date": "2023-04-24",
+        "expiration_date": "2025-04-24",
+        "underlying": {
+            "fixed_rate": 0.03,
+            "floating_rate_reference": "EURIBOR",
+            "floating_rate_spread": 0.002,
+            "payment_frequency_months": 12,
+            "currency": "EUR",
+            "day_count_convention": "ACT/360",
+            "start_date": "2025-04-24",
+            "end_date": "2030-04-24",
+            "notional": 5000000.0,
+            "valuation_date": "2023-04-24"
+        },
+        "exercise_date": "2025-04-24",
+        "settlement_type": "Physical",
+        "price": null,
+        "delta": null,
+        "gamma": null,
+        "vega": null,
+        "theta": null,
+        "rho": null
+    }
+]
