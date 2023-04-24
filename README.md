@@ -2,7 +2,7 @@
 
 [![Project Status: Active - The project is actively developed.](https://img.shields.io/badge/Project%20Status-Active-brightgreen)](https://github.com/username/projectname)
 
-Python client for your pricing web service that uses OAuth2 or Token-based authentication which provides a host of features, including:
+Python client for your pricing web service that uses OAuth2 or Token-based authentication. It provides a host of features including:
 
 - Pricing of a wide range of financial products.
 - Computing and managing Greeks.
