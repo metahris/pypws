@@ -1,0 +1,22 @@
+{
+  "pricing_service": {
+    "base_url": "",
+    "authentication": "OAuth2",
+    "uat": {
+        "token_url": "",
+        "client_id": "",
+        "client_secret": "",
+        "grant_type": "client_credentials",
+         "scope": "",
+        "token": ""
+      },
+      "prod": {
+        "token_url": "",
+        "client_id": "",
+        "client_secret": "",
+        "grant_type": "client_credentials",
+        "scope": "",
+        "token": ""
+      }
+  }
+}
