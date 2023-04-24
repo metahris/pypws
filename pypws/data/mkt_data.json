@@ -1,0 +1,122 @@
+{
+  "market_date": "2023-04-24T00:00:00",
+  "discount_curve": {
+    "currency": "EUR",
+    "curve_date": "2023-04-24T00:00:00",
+    "nodes": [
+      {
+        "tenor": "1W",
+        "value": 0.001
+      },
+      {
+        "tenor": "1M",
+        "value": 0.002
+      },
+      {
+        "tenor": "3M",
+        "value": 0.003
+      },
+      {
+        "tenor": "6M",
+        "value": 0.004
+      },
+      {
+        "tenor": "1Y",
+        "value": 0.005
+      }
+    ],
+    "curve_type": "DiscountCurve",
+    "interpolation_type": "linear",
+    "extrapolation_type": "linear"
+  },
+  "forward_rates_curve": {
+    "currency": "EUR",
+    "curve_date": "2023-04-24T00:00:00",
+    "nodes": [
+      {
+        "tenor": "1W",
+        "value": 0.0015
+      },
+      {
+        "tenor": "1M",
+        "value": 0.0025
+      },
+      {
+        "tenor": "3M",
+        "value": 0.0035
+      },
+      {
+        "tenor": "6M",
+        "value": 0.0045
+      },
+      {
+        "tenor": "1Y",
+        "value": 0.0055
+      }
+    ],
+    "curve_type": "ForwardRatesCurve",
+    "interpolation_type": "linear",
+    "extrapolation_type": "linear"
+  },
+  "spot_rates_curve": {
+    "currency": "EUR",
+    "curve_date": "2023-04-24T00:00:00",
+    "nodes": [
+      {
+        "tenor": "1W",
+        "value": 0.002
+      },
+      {
+        "tenor": "1M",
+        "value": 0.003
+      },
+      {
+        "tenor": "3M",
+        "value": 0.004
+      },
+      {
+        "tenor": "6M",
+        "value": 0.005
+      },
+      {
+        "tenor": "1Y",
+        "value": 0.006
+      }
+    ],
+    "curve_type": "SpotRatesCurve",
+    "interpolation_type": "linear",
+    "extrapolation_type": "linear"
+  },
+  "volatility": [
+    {
+      "maturity": "1M",
+      "strike": 0.9,
+      "value": 0.15
+    },
+    {
+      "maturity": "1M",
+      "strike": 1.0,
+      "value": 0.16
+    },
+    {
+      "maturity": "1M",
+      "strike": 1.1,
+      "value": 0.17
+    },
+    {
+      "maturity": "3M",
+      "strike": 0.9,
+      "value": 0.18
+    },
+    {
+      "maturity": "3M",
+      "strike": 1.0,
+      "value": 0.19
+    },
+    {
+      "maturity": "3M",
+      "strike": 1.1,
+      "value": 0.20
+    }
+  ]
+}
