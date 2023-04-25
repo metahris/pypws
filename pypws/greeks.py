@@ -21,7 +21,6 @@ async def compute_delta(priceable: Priceable, batches=1, step_size=0.0001):
     priceable_down.options = options_copy_down
     # set batch size
     batch_size = int(len(priceable.options) / batches)
-    print(batch_size)
     # price shifted up/down options
     results_up, results_down = await asyncio.gather(
         pricing_service.price(priceable=priceable_up, batch_size=batch_size),
