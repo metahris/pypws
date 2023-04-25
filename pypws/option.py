@@ -28,7 +28,7 @@ class ExerciseStyle(enum.Enum):
 
 @dataclass
 class Underlying(metaclass=ABCMeta):
-    pass
+    price: float
 
 
 @dataclass
