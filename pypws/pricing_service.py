@@ -17,6 +17,10 @@ class OptionPricingService(BaseAPI):
         :param endpoint: the pricing endpoint for the specified option
         :return: list of priced options
         '''
+        if not priceable.options:
+            return []
+        if not 1 <= batch_size <= len(priceable.options):
+            raise Exception(f'batch size must be => 1 and <= {len(priceable.options)} (length of options list)')
         batches = [priceable.options[i:i + batch_size] for i in range(0, len(priceable.options), batch_size)]
         async with self._client_session() as session:
             tasks = []
@@ -28,3 +32,6 @@ class OptionPricingService(BaseAPI):
                 tasks.append(task)
             results = await asyncio.gather(*tasks)
             return results
+
+
+pricing_service = OptionPricingService()
