@@ -2,12 +2,12 @@ import datetime
 import enum
 import typing
 from dataclasses import dataclass
+from os.path import join
 
 from dataclasses_json import dataclass_json
 
-from pypws.helpers import load_data
-from os.path import join
 from data import data_folder_path
+from pypws.helpers import load_data
 
 
 class CurveType(enum.Enum):
