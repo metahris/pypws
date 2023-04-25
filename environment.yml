@@ -1,4 +1,4 @@
-name: bark-env
+name: pypwsenv
 channels:
   - defaults
 dependencies:
