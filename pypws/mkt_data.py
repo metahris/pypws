@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 
 from pypws.helpers import load_data
+from os.path import join
+from data import data_folder_path
 
 
 class CurveType(enum.Enum):
@@ -72,5 +74,5 @@ class MarketData:
     volatility: typing.List[VolatilityPoint]
 
 
-mkt_data = MarketData.from_dict(load_data('data/mkt_data.json'))
-
+mkt_data_file_path = join(data_folder_path, 'mkt_data.json')
+mkt_data = MarketData.from_dict(load_data(mkt_data_file_path))
