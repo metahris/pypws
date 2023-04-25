@@ -1,8 +1,12 @@
+import typing
 from dataclasses import dataclass
+from os.path import dirname, abspath, join
 
 from dataclasses_json import dataclass_json
 
 from pypws.helpers import load_data
+
+file_path = dirname(abspath(__file__))
 
 
 @dataclass
@@ -11,7 +15,7 @@ class Env:
     client_id: str
     client_secret: str
     grant_type: str
-    scope: str
+    scope: typing.List[str]
     token: str
 
 
@@ -29,6 +33,5 @@ class Config:
     pricing_service: PricingService
 
 
-config = Config.from_dict(load_data('config.json'))
-
-print(config)
+config_json_path = join(file_path, 'config.json')
+config = Config.from_dict(load_data(config_json_path))
