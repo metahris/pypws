@@ -19,7 +19,7 @@ class BaseAPI:
     """
     BASE_REQUEST_HEADERS = {'accept': 'application/json'}
 
-    def __int__(self, config, env):
+    def __init__(self, config, env):
         self.env = env
         self.__config = config
         self.__auths = getattr(self.__config, env)
