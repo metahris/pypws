@@ -10,17 +10,18 @@ class OptionPricingService(BaseAPI):
         super().__init__(config=config.pricing_service, env=env)
         self._set_resource_url('pricing')
 
-    async def price(self, priceable: Priceable, batch_size: int, endpoint=''):
+    async def price(self, priceable: Priceable, batches_nbr: int = 1, endpoint=''):
         '''
         :param priceable: Priceable object
-        :param batch_size: number of options per batch
+        :param batches_nbr: number of batches containing all priceable options
         :param endpoint: the pricing endpoint for the specified option
         :return: list of priced options
         '''
         if not priceable.options:
             return []
-        if not 1 <= batch_size <= len(priceable.options):
-            raise Exception(f'batch size must be => 1 and <= {len(priceable.options)} (length of options list)')
+        if not batches_nbr >= 1:
+            raise Exception('number of batches must be at least 1')
+        batch_size = int(len(priceable.options) / batches_nbr)
         batches = [priceable.options[i:i + batch_size] for i in range(0, len(priceable.options), batch_size)]
         async with self._client_session() as session:
             tasks = []
